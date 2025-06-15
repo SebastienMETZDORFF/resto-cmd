@@ -15,4 +15,11 @@ export const store = configureStore({
     list: cartSlice.reducer,
     notes: notesSlice.reducer,
   }),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().prepend([
+      (store) => (next) => (action) => {
+        console.log("Action", action);
+        next(action);
+      },
+    ]),
 });
