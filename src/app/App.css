@@ -154,7 +154,6 @@ body {
 .FidelityPoints {
   font-size: 14pt;
   font-weight: 600;
-  position: fixed;
   bottom: 0px;
   width: 100%;
   display: flex;
